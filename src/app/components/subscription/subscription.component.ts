@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PersonService} from '../../services/person.service';
+import {Person} from '../../model/person';
 
 @Component({
   selector: 'app-subscription',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subscription.component.css']
 })
 export class SubscriptionComponent implements OnInit {
+  person : Person
+  constructor(private personService: PersonService) { }
 
-  constructor() { }
+  ngOnInit() {    
+    this.person = new Person()
+  }
 
-  ngOnInit() {
+  onSubmit(person: Person) {
+    this.personService.newPerson(person)
+      .subscribe(person => {this.person = person})
+  }
+
+  clearSubscription() {
+    this.person = new Person();
   }
 
 }

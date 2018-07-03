@@ -5,4 +5,7 @@ export class Person {
     lastName    : string;
     celNumber   : number;
     email       : string;
+    constructor(){
+        
+    }
 }

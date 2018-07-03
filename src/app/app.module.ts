@@ -9,7 +9,9 @@ import { AppRoutingModule } from './/app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component'; // <-- NgModel lives here
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { MessagesComponent } from './components/messages/messages.component'; // <-- NgModel lives here
+import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,14 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     TopComponent,
     LoginComponent,
     SubscriptionComponent,
-    HomeComponent,    
-    ContactUsComponent
+    HomeComponent,        
+    ContactUsComponent, MessagesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
