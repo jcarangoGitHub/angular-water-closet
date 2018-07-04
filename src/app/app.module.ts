@@ -12,6 +12,12 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { MessagesComponent } from './components/messages/messages.component'; // <-- NgModel lives here
 import { HttpClientModule }    from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//prineng
+import {InputTextModule} from 'primeng/inputtext';
+import {CalendarModule} from 'primeng/calendar';
+import {PanelModule} from 'primeng/panel';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,10 @@ import { HttpClientModule }    from '@angular/common/http';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    InputTextModule,
+    PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent],
