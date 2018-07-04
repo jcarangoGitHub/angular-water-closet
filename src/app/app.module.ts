@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {InputTextModule} from 'primeng/inputtext';
 import {CalendarModule} from 'primeng/calendar';
 import {PanelModule} from 'primeng/panel';
+import {ButtonModule} from 'primeng/button';
+import {PasswordModule} from 'primeng/password';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {PanelModule} from 'primeng/panel';
     HttpClientModule,
     BrowserAnimationsModule,
     InputTextModule,
-    PanelModule
+    PanelModule,
+    ButtonModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent],
